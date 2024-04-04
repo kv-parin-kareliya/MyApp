@@ -67,6 +67,7 @@
 
 
 section.main {
+    opacity: 0;
     .container {
         .mat-card-wrapper {
             display: flex;
@@ -84,13 +85,43 @@ section.main {
             }
         }
 
+
+        .table-wrapper-full-width {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: space-between;
+            align-items: stretch;
+            margin-bottom: 25px;
+            gap: 25px;
+
+            .form-card-wrapper {
+                max-width: 100%;
+                width: 100%;
+                padding: 20px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: stretch;
+                justify-content: space-between;
+                align-items: stretch;
+
+                app-snack-bar {
+                    max-width: fit-content;
+                }
+            }
+        }
+
         .form-tab-card-wrapper {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             align-content: center;
             justify-content: space-between;
-            align-items: flex-start;
+            align-items: stretch;
+            margin-bottom: 25px;
         
 
             .tabs-card-wrapper, .form-card-wrapper {
@@ -127,4 +158,21 @@ section.main {
             }
         }
     }
+}
+
+.progress-spinner-wrapper {
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 999999;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
